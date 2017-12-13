@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="loadHome()">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadContact()">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadLogin()">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadRegister()">Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Main-->
+    <div class="wrapper">
+      <div class="container">
+        <h1>Welcome!</h1>
+      </div>
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+    function showDropMenu(){
+    var dropVar = document.querySelector("#navbarDropdownMenuLink");
+    dropVar.setAttribute("aria-expanded", "true");
+    dropVar.classList.add("show");
+    }
+    function loadRegister(){
+    window.location.assign("register.html");
+    }
+    function loadLogin(){
+    window.location.assign("login.html");
+    }
+    function loadContact(){
+    window.location.assign("contact.php");
+    }
+    function loadHome(){
+    window.location.assign("index.html");
+    }
+    </script>
+  </body>
+</html>
