@@ -2,12 +2,24 @@ var rs = require('readline-sync');
 var print = require('./print');
 var colors = require('colors');
 
-var firstNum = 30;
-var secondNum = 20;
+var firstNum = rs.question('Please enter a number.'.yellow);
+var secondNum = rs.question('Please enter another number.'.yellow);
+var operatorItem = rs.question('Please enter an operator (+, - , / , * ).'.yellow);
+var calculatedResult;
 
-print(firstNum + secondNum.underline);
+if (operatorItem == "+") {
+    calculatedResult = "The result is: " + (firstNum + secondNum);
+} else if (operatorItem == "-") {
+    calculatedResult = "The result is: " + (firstNum - secondNum);
+} else if (operatorItem == "*") {
+    calculatedResult = "The result is: " + (firstNum * secondNum);
+} else if (operatorItem == "/") {
+    calculatedResult = "The result is: " + (firstNum / secondNum);
+} else {
+    calculatedResult = "Operation not found!";
+}
 
-console.log('This is red text'.underline.red);
+print(String(calculatedResult).underline.red);
 
 var name = rs.question('What is your name?'.cyan);
 
